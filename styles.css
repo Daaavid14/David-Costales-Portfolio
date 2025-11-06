@@ -1,0 +1,204 @@
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  z-index: 1000;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 23px;
+  transition: 0.2s ease-in-out;
+}
+
+header a:hover {
+  color: #555;
+  background: hsla(0, 4%, 38%, 0.356);
+  border-radius: 10px;
+  padding: 0.1em;
+  transform: scale(1.5);
+}
+
+section {
+  padding: 90px 0;
+  min-height: 100vh;
+}
+
+#bold {
+  font-size: larger;
+  padding: 1.5rem;
+}
+
+.home {
+  border-radius: 20%;
+  box-shadow: 0 0 20px 2px black;
+}
+
+.home img {
+position: relative;
+width: 200px;
+border-radius: 20%;
+box-shadow: 0 0 25px solid gray;
+}
+
+#home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.85);
+}
+
+#home h1 {
+  font-size: 3rem;
+  font-size: 60px;
+  padding: 0 0.5em;
+  animation: fadeInDown 2s;
+  position: relative;
+}
+
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+#about img {
+  width: 100%;  
+  border-radius: 10px;
+  transition: transform 0.4s;
+}
+
+#about img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px 2px black;
+}
+
+#gallery img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.4s;
+}
+
+#gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px 2px black;
+}
+
+#projects img {
+  width: 100%;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
+
+footer {
+  background: #111;
+  color: #bbb;
+  text-align: center;
+  padding: 20px;
+}
+
+.social-icons i {
+  font-size: 3rem;
+  margin: 10px;
+  color: #bbb;
+  transition: 0.3s;
+}
+
+.social-icons i:hover {
+  color: #555;
+  transform: translateY(-5px);
+}
+
+.mt-3{
+  font-size: larger;
+}
+
+section h2 {
+  font-weight: bolder;
+  font-size: 50px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.cursor {
+  position: relative;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255,255,255,.75);
+  font-size: 25px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+}
+
+.typewriter-animation {
+  animation: typewriter 2s steps(10) 1s 1 normal both, 
+  blinkingCursor 800ms steps(10) infinite;
+}
+
+@keyframes typewriter {
+  from { width: 0;}
+  to { width: 54%;}
+}
+
+@keyframes blinkingCursor {
+  from { border-right-color: rgba(255,255,255,.75); }
+  to { border-right-color: transparent; }
+}
+
+#about-photo {
+  background-color: rgba(0, 0, 0, 0.85);
+  width: 100%;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.logo {
+  font-size: 2rem;
+  padding: 0 80px;
+}
+
+.wave-text span {
+  display: inline-block;
+  font-size: 2rem;
+  animation: wave 2s ease-in-out infinite;
+}
+
+.wave-text span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.wave-text span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.wave-text span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.wave-text span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.wave-text span:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
