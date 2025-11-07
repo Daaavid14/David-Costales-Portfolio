@@ -152,6 +152,11 @@ nav li:first-child {
   100% { opacity: 1; transform: translateY(0); }
 }
 
+#about-photo {
+  background-color: #222;
+  border-radius: 20px;
+}
+
 /* About Section */
 #about img, #gallery img {
   width: 100%;
