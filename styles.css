@@ -121,7 +121,7 @@ nav li:first-child {
 .home img {
   position: relative;
   width: 40vw; /* Make it responsive */
-  max-width: 200px; /* Limit maximum width */
+  max-width: 300px; /* Limit maximum width */
   height: auto; /* Maintain aspect ratio */
   border-radius: 20%;
   box-shadow: 0 0 25px solid black;
@@ -155,6 +155,13 @@ nav li:first-child {
 #about-photo {
   background-color: #222;
   border-radius: 20px;
+}
+
+.about-me {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0 0 1.5vw 0;
 }
 
 /* About Section */
