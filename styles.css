@@ -9,9 +9,6 @@ body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   scroll-behavior: smooth;
   min-height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 nav {
@@ -20,7 +17,7 @@ nav {
   width: 100%;
   color: black;
   z-index: 1000;
-  box-shadow: -10px 0 10px rgba(255, 255, 255, 0.2);
+  box-shadow: -5px 0 5px rgba(255, 255, 255, 0.2);
 }
 
 nav ul {
@@ -59,7 +56,7 @@ nav li:first-child {
   position: fixed;
   top: 0;
   right: 0;
-  height: 100vh;
+  height: 1000vh;
   width: 200px;
   z-index: 1000;
   background-color: rgba(0, 0, 0, 0.2);;
@@ -92,9 +89,13 @@ nav li:first-child {
   }
 }
 
-@media(max-width:300px){
+@media(max-width:500px){
   .sidebar {
     width: 100%;
+  }
+  nav .sides {
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -105,18 +106,12 @@ section {
   min-height: 100vh;
 }
 
-.home {
-  border-radius: 20%;
-  position: relative;
-  box-shadow: 0 0 20px 2px black;
-}
-
 .home img {
 position: relative;
 width: 200px;
 border-radius: 20%;
-box-shadow: 0 0 25px solid gray;
-}
+box-shadow: 0 0 25px solid black;
+} 
 
 #home {
   display: flex;
@@ -124,7 +119,6 @@ box-shadow: 0 0 25px solid gray;
   justify-content: center;
   color: white;
   text-align: center;
-  width: 100%;
   background: rgba(0, 0, 0, 0.85);
   background-size: cover;
 }
@@ -141,7 +135,11 @@ box-shadow: 0 0 25px solid gray;
   0% { opacity: 0; transform: translateY(-50px); }
   100% { opacity: 1; transform: translateY(0); }
 }
-
+#about-photo {
+  background-color: rgba(0, 0, 0, 0.85);
+  border-radius: 10px;
+}
+  
 #about img {
   width: 100%;  
   border-radius: 10px;
@@ -223,13 +221,6 @@ section h2 {
 @keyframes blinkingCursor {
   from { border-right-color: rgba(255,255,255,.75); }
   to { border-right-color: transparent; }
-}
-
-#about-photo {
-  background-color: rgba(0, 0, 0, 0.85);
-  width: 100%;
-  padding: 1em;
-  border-radius: 10px;
 }
 
 .logo {
