@@ -9,6 +9,9 @@ body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   scroll-behavior: smooth;
   min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 nav {
@@ -57,8 +60,8 @@ nav li:first-child {
   top: 0;
   right: 0;
   height: 100vh;
-  width: 250px;
-  z-index: 999;
+  width: 200px;
+  z-index: 1000;
   background-color: rgba(0, 0, 0, 0.2);;
   backdrop-filter: blur(10px);
   box-shadow: -10px 0 10px rgba(255, 255, 255, 0.1);
@@ -89,27 +92,22 @@ nav li:first-child {
   }
 }
 
-@media(max-width:400px){
+@media(max-width:300px){
   .sidebar {
     width: 100%;
   }
 }
 
 section {
-  padding: 90px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#bold {
-  font-size: larger;
-  padding: 1.5rem;
 }
 
 .home {
   border-radius: 20%;
+  position: relative;
   box-shadow: 0 0 20px 2px black;
 }
 
@@ -128,12 +126,13 @@ box-shadow: 0 0 25px solid gray;
   text-align: center;
   width: 100%;
   background: rgba(0, 0, 0, 0.85);
+  background-size: cover;
 }
 
 #home h1 {
   font-size: 3rem;
   font-size: 60px;
-  padding: 0 0.5em;
+  padding: 0.1em 0.5em;
   animation: fadeInDown 2s;
   position: relative;
 }
