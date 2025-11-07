@@ -18,4 +18,3 @@ function hideSidebar() {
     sidebar.style.display = 'none'
 }
 
-

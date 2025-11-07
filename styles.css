@@ -1,15 +1,34 @@
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 
+/* Prevent Horizontal Scrolling */
+html, body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  width: 100%; /* Ensure the body takes full width */
+  margin: 0;
+}
+
+/* Global Settings */
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box; /* Ensure padding and border don't affect element's width */
 }
 
 body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   scroll-behavior: smooth;
   min-height: 100vh;
+  width: 100%; /* Full width */
 }
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px; /* Added padding for spacing */
+}
+
 
 nav {
   background-color: rgba(0, 0, 0, 0.85);
@@ -18,6 +37,8 @@ nav {
   color: black;
   z-index: 1000;
   box-shadow: -5px 0 5px rgba(255, 255, 255, 0.2);
+  top: 0;
+  left: 0;
 }
 
 nav ul {
@@ -26,7 +47,8 @@ nav ul {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  font-size: 25px;
+  font-size: 1.5rem;
+  padding: 10px;
 }
 
 nav li {
@@ -35,7 +57,7 @@ nav li {
 
 nav a {
   height: 100%;
-  padding: 0 30px;
+  padding: 0 15px;
   text-decoration: none;
   display: flex;
   margin-top: 7px;
@@ -52,14 +74,15 @@ nav li:first-child {
   margin-right: auto;
 }
 
+/* Sidebar for Mobile */
 .sidebar {
   position: fixed;
   top: 0;
   right: 0;
-  height: 1000vh;
+  height: 100vh;  /* Full height */
   width: 200px;
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.2);;
+  background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
   box-shadow: -10px 0 10px rgba(255, 255, 255, 0.1);
   display: none;
@@ -68,50 +91,41 @@ nav li:first-child {
   justify-content: flex-start;
 }
 
-.sidebar li {
-  width: 100%;
-}
-
-.sidebar a {
-  width: 100%;
-}
-
+/* Mobile Menu Button */
 .menu-button {
   display: none;
 }
 
-@media(max-width:800px){
+@media(max-width:800px) {
   .hideOnMobile {
     display: none;
   }
+  
   .menu-button {
     display: block;
   }
 }
 
-@media(max-width:500px){
+@media(max-width:500px) {
   .sidebar {
-    width: 100%;
+    width: 100%; /* Full width for smaller screens */
   }
+  
   nav .sides {
     align-items: center;
     justify-content: center;
   }
 }
 
-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
+/* Home Section */
 .home img {
-position: relative;
-width: 200px;
-border-radius: 20%;
-box-shadow: 0 0 25px solid black;
-} 
+  position: relative;
+  width: 40vw; /* Make it responsive */
+  max-width: 200px; /* Limit maximum width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 20%;
+  box-shadow: 0 0 25px solid black;
+}
 
 #home {
   display: flex;
@@ -121,11 +135,13 @@ box-shadow: 0 0 25px solid black;
   text-align: center;
   background: rgba(0, 0, 0, 0.85);
   background-size: cover;
+  padding: 20px;
+  width: 100%; /* Ensure full width */
+  height: 100vh; /* Ensure it covers full viewport height */
 }
 
 #home h1 {
   font-size: 3rem;
-  font-size: 60px;
   padding: 0.1em 0.5em;
   animation: fadeInDown 2s;
   position: relative;
@@ -135,39 +151,21 @@ box-shadow: 0 0 25px solid black;
   0% { opacity: 0; transform: translateY(-50px); }
   100% { opacity: 1; transform: translateY(0); }
 }
-#about-photo {
-  background-color: rgba(0, 0, 0, 0.85);
-  border-radius: 10px;
-}
-  
-#about img {
-  width: 100%;  
+
+/* About Section */
+#about img, #gallery img {
+  width: 100%;
+  max-width: 100%; /* Avoid exceeding the container */
   border-radius: 10px;
   transition: transform 0.4s;
 }
 
-#about img:hover {
+#about img:hover, #gallery img:hover {
   transform: scale(1.05);
   box-shadow: 0 0 20px 2px black;
 }
 
-#gallery img {
-  width: 100%;
-  border-radius: 10px;
-  transition: transform 0.4s;
-}
-
-#gallery img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px 2px black;
-}
-
-#projects img {
-  width: 100%;
-  border: 2px solid #ddd;
-  border-radius: 8px;
-}
-
+/* Footer */
 footer {
   background: #111;
   color: #bbb;
@@ -187,16 +185,7 @@ footer {
   transform: translateY(-5px);
 }
 
-.mt-3{
-  font-size: larger;
-}
-
-section h2 {
-  font-weight: bolder;
-  font-size: 50px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
+/* Cursor Animation */
 .cursor {
   position: relative;
   margin: 0 auto;
@@ -214,8 +203,8 @@ section h2 {
 }
 
 @keyframes typewriter {
-  from { width: 0;}
-  to { width: 54%;}
+  from { width: 0; }
+  to { width: 54%; }
 }
 
 @keyframes blinkingCursor {
@@ -223,11 +212,7 @@ section h2 {
   to { border-right-color: transparent; }
 }
 
-.logo {
-  font-size: 2rem;
-  padding: 0 80px;
-}
-
+/* Wave Text */
 .wave-text span {
   display: inline-block;
   font-size: 2rem;
