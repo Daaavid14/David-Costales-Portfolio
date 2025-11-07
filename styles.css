@@ -125,6 +125,7 @@ nav li:first-child {
   height: auto; /* Maintain aspect ratio */
   border-radius: 20%;
   box-shadow: 0 0 25px solid black;
+  object-fit: contain;
 }
 
 #home {
