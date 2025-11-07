@@ -1,24 +1,23 @@
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 
-/* Prevent Horizontal Scrolling */
 html, body {
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  width: 100%; /* Ensure the body takes full width */
+  overflow-x: hidden; 
+  width: 100%; 
   margin: 0;
 }
 
-/* Global Settings */
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Ensure padding and border don't affect element's width */
+  box-sizing: border-box; 
 }
 
 body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   scroll-behavior: smooth;
   min-height: 100vh;
-  width: 100%; /* Full width */
+  width: 100%;
 }
 
 section {
@@ -26,7 +25,7 @@ section {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 20px; /* Added padding for spacing */
+  padding: 20px;
 }
 
 
@@ -74,12 +73,12 @@ nav li:first-child {
   margin-right: auto;
 }
 
-/* Sidebar for Mobile */
+
 .sidebar {
   position: fixed;
   top: 0;
   right: 0;
-  height: 100vh;  /* Full height */
+  height: 100vh;  
   width: 200px;
   z-index: 1000;
   background-color: rgba(0, 0, 0, 0.2);
@@ -91,7 +90,7 @@ nav li:first-child {
   justify-content: flex-start;
 }
 
-/* Mobile Menu Button */
+
 .menu-button {
   display: none;
 }
@@ -108,7 +107,7 @@ nav li:first-child {
 
 @media(max-width:500px) {
   .sidebar {
-    width: 100%; /* Full width for smaller screens */
+    width: 100%;
   }
   
   nav .sides {
@@ -120,9 +119,9 @@ nav li:first-child {
 /* Home Section */
 .home img {
   position: relative;
-  width: 40vw; /* Make it responsive */
-  max-width: 300px; /* Limit maximum width */
-  height: auto; /* Maintain aspect ratio */
+  width: 40vw;
+  max-width: 300px;
+  height: auto;
   border-radius: 20%;
   box-shadow: 0 0 25px solid black;
   object-fit: contain;
@@ -137,8 +136,8 @@ nav li:first-child {
   background: rgba(0, 0, 0, 0.85);
   background-size: cover;
   padding: 20px;
-  width: 100%; /* Ensure full width */
-  height: 100vh; /* Ensure it covers full viewport height */
+  width: 100%;
+  height: 100vh;
 }
 
 #home h1 {
@@ -168,7 +167,7 @@ nav li:first-child {
 /* About Section */
 #about img, #gallery img {
   width: 100%;
-  max-width: 100%; /* Avoid exceeding the container */
+  max-width: 100%;
   border-radius: 10px;
   transition: transform 0.4s;
 }
@@ -198,7 +197,6 @@ footer {
   transform: translateY(-5px);
 }
 
-/* Cursor Animation */
 .cursor {
   position: relative;
   margin: 0 auto;
