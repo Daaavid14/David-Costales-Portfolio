@@ -66,6 +66,7 @@ nav a {
 
 nav a:hover {
   background-color: #555;
+  height: 50px;
   border-radius: 10px;
 }
 
@@ -73,13 +74,15 @@ nav li:first-child {
   margin-right: auto;
 }
 
-.sides, .sides-a {
+nav .sides, .sides-a {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
 }
 
+nav .nav-menu {
+  height: 50px;
+}
 
 .sidebar {
   position: fixed;
@@ -97,7 +100,6 @@ nav li:first-child {
   justify-content: flex-start;
 }
 
-
 .menu-button {
   display: none;
 }
@@ -109,6 +111,17 @@ nav li:first-child {
   
   .menu-button {
     display: block;
+  }
+
+  nav .sides{
+    align-items: center;
+    justify-content: center;
+    padding: 0 1vw;
+  }
+  nav .sides-a {
+    align-items: center;
+    justify-content: center;
+    padding: 0 1vw;
   }
 }
 
