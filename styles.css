@@ -51,11 +51,11 @@ nav ul {
 }
 
 nav li {
-  height: 50px;
+  height: 30px;
 }
 
 nav a {
-  height: 100%;
+  height: 100%;;
   padding: 0 15px;
   text-decoration: none;
   display: flex;
@@ -71,6 +71,13 @@ nav a:hover {
 
 nav li:first-child {
   margin-right: auto;
+}
+
+.sides, .sides-a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 
@@ -110,9 +117,15 @@ nav li:first-child {
     width: 100%;
   }
   
-  nav .sides {
+  nav .sides{
     align-items: center;
     justify-content: center;
+    padding: 0 40vw;
+  }
+  nav .sides-a {
+    align-items: center;
+    justify-content: center;
+    padding: 0 42vw;
   }
 }
 
@@ -209,13 +222,13 @@ footer {
 }
 
 .typewriter-animation {
-  animation: typewriter 2s steps(10) 1s 1 normal both, 
-  blinkingCursor 800ms steps(10) infinite;
+  animation: typewriter 2s steps(5) 1s normal both, 
+  blinkingCursor 800ms steps(5) infinite;
 }
 
 @keyframes typewriter {
   from { width: 0; }
-  to { width: 54%; }
+  to { width: 45%; }
 }
 
 @keyframes blinkingCursor {
