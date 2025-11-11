@@ -74,6 +74,7 @@ nav li:first-child {
 }
 
 nav .sides, .sides-a {
+  padding: 0 50vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -284,4 +285,65 @@ footer {
   50% {
     transform: translateY(-20px);
   }
+} 
+
+iframe {
+    margin: 10px 0;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    width: 60vw;
+}
+
+.penguin iframe {
+    height: 60vh;
+    width: 100%;
+}
+
+.ferris-wheel iframe {
+    height: 60vh;
+    width: 100%;
+}
+
+.city-skyline iframe {
+    height: 60vh;
+    width: 100%;
+}
+
+.carousel {
+    margin: 100px auto;
+    width: 100%;
+    border: 5px solid black;
+    background-color: #222;
+    border-radius: 20px;
+    display: flex;
+    height: 30em;
+    overflow-x: auto;
+    gap: 1em;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  animation: spin 20s infinite linear;
+}
+
+.card {
+  width: 20em;
+  height: 5em;
+  background-color: #555;
+  align-content: center;
+  border-radius: .2em;
+  text-align: center;
+  align-content: center;
+}
+
+@keyframes spin {
+  from {translate: 0;}
+  to {translate: -100%;}
 }
