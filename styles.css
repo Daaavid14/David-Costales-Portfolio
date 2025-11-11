@@ -233,18 +233,18 @@ footer {
   font-size: 25px;
   text-align: center;
   white-space: nowrap;
-  overflow: hidden;
+  overflow: hidden;l
   transform: translateY(-50%);
 }
 
 .typewriter-animation {
-  animation: typewriter 2s steps(5) 1s normal both, 
+  animation: typewriter 2s steps(40) 1s infinite alternate-reverse, 
   blinkingCursor 800ms steps(5) infinite;
 }
 
 @keyframes typewriter {
   from { width: 0; }
-  to { width: 45%; }
+  to { width: 49%; }
 }
 
 @keyframes blinkingCursor {
