@@ -6,156 +6,335 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>David Cris Will Costales | Portfolio</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet"/>
-  <script src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
-<nav>
-    <ul class="sidebar">
-      <li class="nav-menu" onclick=hideSidebar()><a class="sides-a" href="#home #about #projects #gallery #contact"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-left-square" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm11.5 5.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
-</svg></a></li>
-      <li class="nav-menu"><a class="sides" href="#home">Home</a></li>
-      <li class="nav-menu"><a class="sides" href="#about">About</a></li>
-      <li class="nav-menu"><a class="sides" href="#projects">Project</a></li>
-      <li class="nav-menu"><a class="sides" href="#gallery">Gallery</a></li>
-      <li class="nav-menu"><a class="sides" href="#contact">Contact</a></li>    
-    </ul>
-    <ul>
-      <li><a href="#">
-          <h1 class="wave-text fw-bold">
-            <span>D</span>
-            <span>a</span>
-            <span>v</span>
-            <span>i</span>
-            <span>d</span>
-          </h1>
-      </a></li>
-      <li class="hideOnMobile"><a href="#home">Home</a></li>
-      <li class="hideOnMobile"><a href="#about">About</a></li>
-      <li class="hideOnMobile"><a href="#projects">Project</a></li>
-      <li class="hideOnMobile"><a href="#gallery">Gallery</a></li>
-      <li class="hideOnMobile"><a href="#contact">Contact</a></li>
-      <li class="menu-button" onclick=showSidebar()><a href="#home #about #projects #gallery #contact"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-</svg></a></li>
-    </ul>
+<body class="loading">
+
+  <!-- PAGE LOADER -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-ring"></div>
+    <p class="loader-text">Loading<span class="loader-dots">...</span></p>
   </div>
-</nav>
 
-  <section id="home" class="home">
-    <div class="home">
-        <img src="img-home.JPG" alt=""> 
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="wave-text"><span>D</span><span>a</span><span>v</span><span>i</span><span>d</span></span>
+        <span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#contact" class="nav-link nav-cta">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <div>
-      <h1> David Cris Will Costales</h1>
-      <p class="cursor typewriter-animation">Developer | Electronics</p>
-    </div>
-  </section>
+  </nav>
 
-  <section id="about" class="bg-light text-center">
-    <div class="container">
-      <h2>About Me</h2>
-      <p class="mt-3">I'm David Cris Will Costales a fresh graduate in Bachelor of Science in 
-          Electronics Engineering from Southern Luzon State University with hands on hardware 
-          and software experience and now learning and focusing on system development.</p>
-      <p>My passion for technology has led me to focus on system development, where I am 
-        continuously expanding my knowledge in programming. As I transition into my professional 
-        career, I am excited to apply my skills in real-world projects and contribute to innovative 
-        solutions that integrate both hardware and software for efficient system performance.</p>
-      <div class="row mt-4 g-4" id="about-photo">
-        <div class="col-md-4 about-me"><img src="img1.JPG" alt="Gallery 1"></div>
-        <div class="col-md-4 about-me"><img src="img2.JPG" alt="Gallery 2"></div>
-        <div class="col-md-4 about-me"><img src="img3.JPG" alt="Gallery 3"></div>
-      </div>
+  <!-- ===== HERO ===== -->
+  <section id="home" class="hero">
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="orb orb-4"></div>
+      <div class="grid-overlay"></div>
+      <div class="noise-overlay"></div>
     </div>
-  </section>
 
-  <section id="projects" class="bg-light text-center">
-    <div class="container">
-      <h2>Projects</h2>
-      <p class="mt-3">Here are some of my works and ongoing projects.</p>
-      <div class="row mt-4 g-4">
-        <div class="col-md-4 penguin"><iframe src="https://daaavid14.github.io/Penguin/" frameborder="0"></iframe></div>
-        <div class="col-md-4 ferris-wheel"><iframe src="https://daaavid14.github.io/Ferris-Wheel/" frameborder="0"></iframe></div>
-        <div class="col-md-4 city-skyline"><iframe src="https://daaavid14.github.io/City-Skyline/" frameborder="0"></iframe></div>
-      </div>
-    </div>
-  </section>
-  
-  <section id="gallery" class="text-center">
-    <div class="container">
-      <h2>Gallery</h2>
-      <div class="carousel">
-        <div class="group">
-          <div class="card"><img src="IMG_0299.jpeg" alt="Gallery 3"></div>
-          <div class="card"><img src="IMG_0222.jpeg" alt="Gallery 4"></div>
-          <div class="card"><img src="IMG_0553.jpeg" alt="Gallery 5"></div>
-          <div class="card"><img src="IMG_0554.jpeg" alt="Gallery 6"></div>
-          <div class="card"><img src="IMG_1111.jpeg" alt="Gallery 8"></div>
-          <div class="card"><img src="IMG_2420.jpeg" alt="Gallery 10"></div>
-          <div class="card"><img src="IMG_8175.jpeg" alt="Gallery 11"></div>
+    <div class="hero-inner">
+      <!-- LEFT: Text -->
+      <div class="hero-text">
+        <p class="hero-greeting animate-in" style="--i:1">Hello, I'm</p>
+        <h1 class="hero-name animate-in" style="--i:2">
+          <span class="name-first">David</span>
+          <span class="name-last gradient-text">Costales</span>
+        </h1>
+        <p class="hero-role animate-in" style="--i:3">
+          <span id="typewriter"></span><span class="cursor-blink">_</span>
+        </p>
+        <p class="hero-bio animate-in" style="--i:4">A fresh Electronics Engineering graduate from SLSU — passionate about bridging hardware &amp; software through innovative system development.</p>
+        <div class="hero-cta-group animate-in" style="--i:5">
+          <a href="#projects" class="btn-primary-cta">View My Work <i class="ri-arrow-right-up-line"></i></a>
+          <a href="#contact" class="btn-secondary-cta">Hire Me <i class="ri-user-line"></i></a>
         </div>
-        <div aria-hidden class="group">
-          <div class="card"><img src="IMG_0299.jpeg" alt="Gallery 3"></div>
-          <div class="card"><img src="IMG_0222.jpeg" alt="Gallery 4"></div>
-          <div class="card"><img src="IMG_0553.jpeg" alt="Gallery 5"></div>
-          <div class="card"><img src="IMG_0554.jpeg" alt="Gallery 6"></div>
-          <div class="card"><img src="IMG_1111.jpeg" alt="Gallery 8"></div>
-          <div class="card"><img src="IMG_2420.jpeg" alt="Gallery 10"></div>
-          <div class="card"><img src="IMG_8175.jpeg" alt="Gallery 11"></div>
+        <div class="hero-stats animate-in" style="--i:6">
+          <div class="stat-item">
+            <span class="stat-num">BS</span>
+            <span class="stat-label">ECE Grad</span>
+          </div>
+          <div class="stat-line"></div>
+          <div class="stat-item">
+            <span class="stat-num">3<span class="stat-plus">+</span></span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-line"></div>
+          <div class="stat-item">
+            <span class="stat-num">∞</span>
+            <span class="stat-label">Ideas</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Photo -->
+      <div class="hero-visual animate-in" style="--i:2">
+        <div class="hero-watermark">DAVID</div>
+        <div class="hero-photo-wrapper">
+          <img src="img-home.JPG" alt="David Costales" class="hero-photo">
+        </div>
+        <div class="floating-badge">
+          <div class="badge-icon"><i class="ri-graduation-cap-line"></i></div>
+          <div class="badge-text">
+            <strong>SLSU Graduate</strong>
+            <span>Electronics Engineering</span>
+          </div>
+        </div>
+        <div class="hero-circle hero-circle-1"></div>
+        <div class="hero-circle hero-circle-2"></div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+      <span class="scroll-label">Scroll</span>
+      <span class="scroll-line"><span class="scroll-ball"></span></span>
+    </a>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section-about">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <span class="section-label">Get to know me</span>
+        <h2 class="section-title">About Me</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal-left">
+          <p>I'm <strong>David Cris Will Costales</strong>, a fresh graduate in Bachelor of Science in Electronics Engineering from Southern Luzon State University with hands-on hardware and software experience, now learning and focusing on system development.</p>
+          <p>My passion for technology has led me to focus on system development, where I am continuously expanding my knowledge in programming. As I transition into my professional career, I am excited to apply my skills in real-world projects and contribute to innovative solutions that integrate both hardware and software for efficient system performance.</p>
+          <div class="skills-section">
+            <h4>Tech Stack</h4>
+            <div class="skills-badges">
+              <span class="badge-skill">HTML</span>
+              <span class="badge-skill">CSS</span>
+              <span class="badge-skill">JavaScript</span>
+              <span class="badge-skill">Bootstrap</span>
+              <span class="badge-skill">C</span>
+              <span class="badge-skill">Python</span>
+              <span class="badge-skill">Electronics</span>
+              <span class="badge-skill">Git</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-images reveal-right">
+          <div class="about-img-grid">
+            <img src="img1.JPG" alt="About 1">
+            <img src="img2.JPG" alt="About 2">
+            <img src="img3.JPG" alt="About 3">
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="text-center">
-    <div class="container last-contact">
-        <h2>Contact Me</h2>
-        <form class="mt-4 col-md-6 mx-auto" action="https://formspree.io/f/xeopywkj" method="POST">
-          <div class="mb-3">
-            <input type="text" id="name" class="form-control" name="name" placeholder="Name" required>
-          </div>
-          
-          <div class="mb-3">
-            <input type="email" id="email" class="form-control" name="email" placeholder="Email" required>
-          </div>
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section-projects">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <span class="section-label">What I've built</span>
+        <h2 class="section-title">Projects</h2>
+        <p class="section-sub">Here are some of my works and ongoing projects.</p>
+      </div>
+      <div class="projects-grid">
 
-          <div class="mb-3">
-            <input type="text" id="subject" class="form-control" name="subject" placeholder="Subject" required>
+        <div class="project-card reveal-up">
+          <div class="project-card-inner">
+            <div class="project-card-front">
+              <div class="project-icon"><i class="ri-code-box-line"></i></div>
+              <h3>CSS Penguin</h3>
+              <p>A fun animated penguin built entirely with pure CSS — showcasing creative use of shapes, colors, and CSS transforms.</p>
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span>
+              </div>
+              <div class="flip-hint"><i class="ri-refresh-line"></i> Hover to flip</div>
+            </div>
+            <div class="project-card-back">
+              <div class="project-icon-back"><i class="ri-code-box-line"></i></div>
+              <h3>CSS Penguin</h3>
+              <p>A delightful pure-CSS character animation demonstrating mastery of CSS shapes, positioning, and layering techniques.</p>
+              <a href="https://daaavid14.github.io/Penguin/" target="_blank" class="btn-demo">
+                Live Demo <i class="ri-external-link-line"></i>
+              </a>
+            </div>
           </div>
-          
-          <div class="mb-3">
-            <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+        </div>
+
+        <div class="project-card reveal-up" style="--delay: 0.15s">
+          <div class="project-card-inner">
+            <div class="project-card-front">
+              <div class="project-icon"><i class="ri-loader-4-line"></i></div>
+              <h3>Ferris Wheel</h3>
+              <p>An animated CSS Ferris Wheel with rotating cabins — a demonstration of CSS animations and transform-origin tricks.</p>
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span><span>Animation</span>
+              </div>
+              <div class="flip-hint"><i class="ri-refresh-line"></i> Hover to flip</div>
+            </div>
+            <div class="project-card-back">
+              <div class="project-icon-back"><i class="ri-loader-4-line"></i></div>
+              <h3>Ferris Wheel</h3>
+              <p>A purely CSS-animated Ferris Wheel showcasing advanced keyframe animations and transform-origin techniques.</p>
+              <a href="https://daaavid14.github.io/Ferris-Wheel/" target="_blank" class="btn-demo">
+                Live Demo <i class="ri-external-link-line"></i>
+              </a>
+            </div>
           </div>
-          
+        </div>
+
+        <div class="project-card reveal-up" style="--delay: 0.3s">
+          <div class="project-card-inner">
+            <div class="project-card-front">
+              <div class="project-icon"><i class="ri-building-2-line"></i></div>
+              <h3>City Skyline</h3>
+              <p>A responsive CSS city skyline that transitions from day to night — using CSS variables and gradients creatively.</p>
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span><span>Responsive</span>
+              </div>
+              <div class="flip-hint"><i class="ri-refresh-line"></i> Hover to flip</div>
+            </div>
+            <div class="project-card-back">
+              <div class="project-icon-back"><i class="ri-building-2-line"></i></div>
+              <h3>City Skyline</h3>
+              <p>A dynamic CSS city skyline with day/night transition using CSS custom properties, gradients, and media queries.</p>
+              <a href="https://daaavid14.github.io/City-Skyline/" target="_blank" class="btn-demo">
+                Live Demo <i class="ri-external-link-line"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY ===== -->
+  <section id="gallery" class="section-gallery">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <span class="section-label">Moments</span>
+        <h2 class="section-title">Gallery</h2>
+      </div>
+      <div class="gallery-grid reveal-up">
+        <div class="gallery-item" data-index="0"><img src="IMG_0299.jpeg" alt="Gallery 1" loading="lazy"><div class="gallery-overlay"><i class="ri-zoom-in-line"></i></div></div>
+        <div class="gallery-item" data-index="1"><img src="IMG_0222.jpeg" alt="Gallery 2" loading="lazy"><div class="gallery-overlay"><i class="ri-zoom-in-line"></i></div></div>
+        <div class="gallery-item" data-index="2"><img src="IMG_0553.jpeg" alt="Gallery 3" loading="lazy"><div class="gallery-overlay"><i class="ri-zoom-in-line"></i></div></div>
+        <div class="gallery-item" data-index="3"><img src="IMG_0554.jpeg" alt="Gallery 4" loading="lazy"><div class="gallery-overlay"><i class="ri-zoom-in-line"></i></div></div>
+        <div class="gallery-item" data-index="4"><img src="IMG_1111.jpeg" alt="Gallery 5" loading="lazy"><div class="gallery-overlay"><i class="ri-zoom-in-line"></i></div></div>
+        <div class="gallery-item" data-index="5"><img src="IMG_2420.jpeg" alt="Gallery 6" loading="lazy"><div class="gallery-overlay"><i class="ri-zoom-in-line"></i></div></div>
+        <div class="gallery-item" data-index="6"><img src="IMG_8175.jpeg" alt="Gallery 7" loading="lazy"><div class="gallery-overlay"><i class="ri-zoom-in-line"></i></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <button class="lightbox-close" id="lightboxClose"><i class="ri-close-line"></i></button>
+    <button class="lightbox-prev" id="lightboxPrev"><i class="ri-arrow-left-s-line"></i></button>
+    <div class="lightbox-img-wrapper">
+      <img src="" alt="Lightbox" id="lightboxImg">
+    </div>
+    <button class="lightbox-next" id="lightboxNext"><i class="ri-arrow-right-s-line"></i></button>
+    <div class="lightbox-counter" id="lightboxCounter"></div>
+  </div>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section-contact">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <span class="section-label">Let's talk</span>
+        <h2 class="section-title">Contact Me</h2>
+      </div>
+      <div class="contact-grid">
+        <form class="contact-form reveal-left" action="https://formspree.io/f/xeopywkj" method="POST">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" name="name" placeholder="John Doe" required>
+          </div>
+          <div class="form-group">
+            <label>Your Email</label>
+            <input type="email" name="email" placeholder="john@example.com" required>
+          </div>
+          <div class="form-group">
+            <label>Subject</label>
+            <input type="text" name="subject" placeholder="Project Inquiry" required>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+          </div>
           <input type="hidden" name="_next" value="https://your-redirect-url.com">
-          
-          <button class="btn btn-dark px-4">Send Message</button>
+          <button type="submit" class="btn-send">
+            <span>Send Message</span>
+            <i class="ri-send-plane-line"></i>
+          </button>
         </form>
 
-        <div class="social-icons mt-4">
-          <a href="https://facebook.com/O9651099727"><i class="fab fa-facebook"></i></a>
-          <a href="https://github.com/Daaavid14"><i class="fab fa-github"></i></a>
-          <a href="tel:+639651099727"><i class="fas fa-phone"></i></a>
+        <div class="contact-info reveal-right">
+          <div class="contact-card glass-card">
+            <h3>Get In Touch</h3>
+            <p>Whether you have a project in mind, want to collaborate, or just want to say hi — my inbox is always open!</p>
+            <div class="social-links">
+              <a href="https://facebook.com/O9651099727" target="_blank" class="social-link">
+                <div class="social-icon-wrap"><i class="fab fa-facebook"></i></div>
+                <span>Facebook</span>
+              </a>
+              <a href="https://github.com/Daaavid14" target="_blank" class="social-link">
+                <div class="social-icon-wrap"><i class="fab fa-github"></i></div>
+                <span>GitHub</span>
+              </a>
+              <a href="tel:+639651099727" class="social-link">
+                <div class="social-icon-wrap"><i class="fas fa-phone"></i></div>
+                <span>+63 965 109 9727</span>
+              </a>
+            </div>
+          </div>
+          <div class="map-wrapper glass-card">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123819.03480148294!2d121.49852126574807!3d14.115806784871005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd54707cc535db%3A0x1257564adb5dd836!2sLucban%2C%20Quezon%2C%20Philippines!5e0!3m2!1sen!2sjp!4v1762822161829!5m2!1sen!2sjp"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
         </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123819.03480148294!2d121.49852126574807!3d14.115806784871005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd54707cc535db%3A0x1257564adb5dd836!2sLucban%2C%20Quezon%2C%20Philippines!5e0!3m2!1sen!2sjp!4v1762822161829!5m2!1sen!2sjp" 
-            width="600" 
-            height="450" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+      </div>
     </div>
   </section>
 
-  <footer>
-    <p>© 2025 All Rights Reserved.</p>
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>© 2026 <span class="gradient-text">David Cris Will Costales</span>. All Rights Reserved.</p>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- BACK TO TOP -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="ri-arrow-up-line"></i>
+  </button>
+
+  <script src="script.js"></script>
 </body>
 </html>
