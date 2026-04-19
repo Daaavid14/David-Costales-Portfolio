@@ -152,12 +152,6 @@ body:not(.loading) .page-loader {
   background: rgba(0,180,216,0.06);
 }
 
-.section-label::before,
-.section-label::after {
-  content: 'â€”';
-  opacity: 0.5;
-}
-
 .section-title {
   font-family: 'Space Grotesk', sans-serif;
   font-size: clamp(2rem, 5vw, 3.2rem);
@@ -237,15 +231,6 @@ body:not(.loading) .page-loader {
   align-items: center;
   gap: 2px;
   user-select: none;
-}
-
-.logo-bracket {
-  font-size: 1.1rem;
-  background: var(--gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 800;
 }
 
 .wave-text span {
