@@ -49,7 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
     'Electronics Engineer',
     'Problem Solver',
     'System Builder',
-    'Creative Thinker'
+    'Creative Thinker',
+    'AI/ML'
   ];
   const el     = document.getElementById('typewriter');
   let rIdx     = 0;

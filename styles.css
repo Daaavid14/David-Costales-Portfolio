@@ -676,8 +676,7 @@ body:not(.loading) .page-loader {
 
 .floating-badge {
   position: absolute;
-  bottom: -10px;
-  left: -30px;
+  bottom: -30px;
   display: flex;
   align-items: center;
   gap: 12px;
